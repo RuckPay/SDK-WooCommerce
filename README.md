@@ -1,4 +1,3 @@
-
 # RuckPay Payments for WooCommerce
 
  - Description: Accept and process all your payments with a single solution anywhere in the world. Furthermore, thanks to RuckPay’s payment solution you will improve your customers’ experience and your acceptance rate thanks to fast and clear online payments. 
@@ -9,7 +8,7 @@
  - WC requires at least: 8.2 
  - WC tested up to: 8.2 
  - Requires PHP: 7.0 Stable
- -  tag: 1.0.0 
+ - Tag: 1.0.0 
  - License: MIT 
  - Contributors: ruckpay
 

@@ -1,53 +1,18 @@
+/* --- [ RUCKPAY styles.css adjustement for Checkout ]  --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+#ruckpay-checkout-summary { margin-bottom: 1em; }
+    #ruckpay-checkout-summary > table { margin: auto; border: solid 1px #ccc; padding: .3em .8em; }
+    #ruckpay-checkout-summary td.woocommerce-table__product-total { text-align: right; }
 
-/* --- [ RUCKPAY styles.css adjustement for Checkout ]  --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */ 
-#ruckpay-checkout-summary {
-    margin-bottom: 1em;
-}
+#ruckpay_iframe_area { padding: 10px 20px; min-height: 200px; border: solid 1px #ccc; margin-bottom: 20px; background-color: #f9f9f9; }
 
-#ruckpay-checkout-summary > table {
-    margin: auto;
-    border: solid 1px #ccc;
-    padding: .3em .8em;
-}
+.ruckpay-footer-disclaimer { padding: 10px 0 0 0; }
 
-#ruckpay-checkout-summary td.woocommerce-table__product-total {
-    text-align: right;
-}
+.ruckpay-buttons-area { display: flex; flex-direction: row; align-content: center; align-items: center; flex-wrap: nowrap; justify-content: center; }
+    .ruckpay-buttons-area button, .ruckpay-buttons-area a { margin: 0 10px; }
 
-#ruckpay_iframe_area { padding: 10px 20px;}
+p.ruckpay-error { display: block; border: solid 1px #ffa4a4; background: #ffe9e9; padding: .5em; margin: 1em 0; color: #ff4848; }
 
-.ruckpay-footer-disclaimer {padding : 10px auto;}
+#submit_payment_button[disabled] { cursor: not-allowed; background-color: grey; }
 
-.ruckpay-buttons-area {display: flex;
-    flex-direction: row;
-    align-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-    justify-content: center;}
-
-p.ruckpay-error {
-    display: block;
-    border: solid 1px #ffa4a4;
-    background: #ffe9e9;
-    padding: .5em;
-    margin: 1em 0;
-    color: #ff4848;
-}
-
-/* #submit_payment_button { */
-    /* float: none; */
-    /* margin-top: 1em; */
-/* } */
-
-#submit_payment_button[disabled] {
-    cursor: not-allowed;
-    background-color: grey;
-}
-
-.wp-block-post-title {
-    display: none;
-}
-
-.entry-header {
-    display: none;
-}
+.wp-block-post-title { display: none; }
+.entry-header { display: none; }
