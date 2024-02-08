@@ -1,0 +1,125 @@
+# Copyright (C) 2024 RuckPay
+# This file is distributed under the same license as the RuckPay Payments for WooCommerce plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: RuckPay Payments for WooCommerce 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/woocommerce-gateway-ruckpay\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-01-15T16:38:41+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.9.0\n"
+"X-Domain: ruckpay\n"
+
+#. Plugin Name of the plugin
+msgid "RuckPay Payments for WooCommerce"
+msgstr ""
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+msgid "https://www.ruckpay.com"
+msgstr ""
+
+#. Description of the plugin
+msgid "Accept and process all your payments with a single solution anywhere in the world. Furthermore, thanks to RuckPay’s payment solution you will improve your customers’ experience and your acceptance rate thanks to fast and clear online payments."
+msgstr ""
+
+#. Author of the plugin
+msgid "RuckPay"
+msgstr ""
+
+#: includes/class-wc-gateway-ruckpay-card.php:14
+msgctxt "RuckPay"
+msgid "RuckPay Bank Card"
+msgstr ""
+
+#: includes/class-wc-gateway-ruckpay-card.php:15
+msgid "Allows Bank Card payment with RuckPay"
+msgstr ""
+
+#: includes/class-wc-gateway-ruckpay-card.php:21
+msgid "Bank Card (with RuckPay)"
+msgstr ""
+
+#: includes/class-wc-gateway-ruckpay-card.php:25
+msgid "Pay with your Bank Card (with RuckPay)."
+msgstr ""
+
+#: includes/class-wc-gateway-ruckpay.php:40
+msgid "Enable/Disable"
+msgstr ""
+
+#: includes/class-wc-gateway-ruckpay.php:42
+msgid "Enable RuckPay Payments"
+msgstr ""
+
+#: includes/class-wc-gateway-ruckpay.php:46
+msgid "Tests in production"
+msgstr ""
+
+#: includes/class-wc-gateway-ruckpay.php:48
+msgid "Hide at checkout for non-admin users"
+msgstr ""
+
+#: woocommerce-gateway-ruckpay.php:141
+msgid "RuckPay Settings"
+msgstr ""
+
+#: woocommerce-gateway-ruckpay.php:156
+msgid "RuckPay's Configuration"
+msgstr ""
+
+#: woocommerce-gateway-ruckpay.php:165
+msgid "Mode"
+msgstr ""
+
+#: woocommerce-gateway-ruckpay.php:179
+msgid "Test Key"
+msgstr ""
+
+#: woocommerce-gateway-ruckpay.php:193
+msgid "Test Secret"
+msgstr ""
+
+#: woocommerce-gateway-ruckpay.php:207
+msgid "Live Key"
+msgstr ""
+
+#: woocommerce-gateway-ruckpay.php:221
+msgid "Live Secret"
+msgstr ""
+
+#: woocommerce-gateway-ruckpay.php:235
+msgid "Checkout page"
+msgstr ""
+
+#: woocommerce-gateway-ruckpay.php:248
+msgid "These settings are necessary to make the RuckPay's payment gateway work."
+msgstr ""
+
+#: woocommerce-gateway-ruckpay.php:258
+msgid "Test"
+msgstr ""
+
+#: woocommerce-gateway-ruckpay.php:260
+msgid "Live"
+msgstr ""
+
+#: woocommerce-gateway-ruckpay.php:389
+msgid "Select a page"
+msgstr ""
+
+#: woocommerce-gateway-ruckpay.php:499
+msgid "Order amount"
+msgstr ""
+
+#: woocommerce-gateway-ruckpay.php:510
+msgid "Transaction reference"
+msgstr ""
+
+#: woocommerce-gateway-ruckpay.php:595
+msgid "Cancel"
+msgstr ""
