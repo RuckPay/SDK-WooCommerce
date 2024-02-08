@@ -5,7 +5,7 @@
  * Description: Accept and process all your payments with a single solution anywhere in the world. Furthermore, thanks to RuckPay’s payment solution you will improve your customers’ experience and your acceptance rate thanks to fast and clear online payments.
  * Version: 1.0.1
  * Author: RuckPay
- * Author URI: https://www.ruckpay.com
+ * Author URI: https://github.com/RuckPay/SDK-WooCommerce
  * Requires at least: 6.4.2
  * Tested up to: 6.4.2
  * WC requires at least: 8.2

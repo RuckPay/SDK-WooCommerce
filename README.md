@@ -1,7 +1,8 @@
 # RuckPay Payments for WooCommerce
 
  - Description: Accept and process all your payments with a single solution anywhere in the world. Furthermore, thanks to RuckPay’s payment solution you will improve your customers’ experience and your acceptance rate thanks to fast and clear online payments. 
- - Tags:   ruckpay, payment, credit card, easy, simple, woocommerce, ecommerce,   e-commerce, checkout Author: RuckPay 
+ - Tags: ruckpay, payment, credit card, easy, simple, woocommerce, ecommerce,   e-commerce, checkout 
+ - Author: RuckPay 
  - Author URI:  https://www.ruckpay.com 
  - Requires at least: 6.0 
  - Tested up to: 6.4.2 
