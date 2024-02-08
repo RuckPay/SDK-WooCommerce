@@ -3,7 +3,7 @@
  * Plugin Name: RuckPay Payments for WooCommerce
  * Plugin URI: https://www.ruckpay.com
  * Description: Accept and process all your payments with a single solution anywhere in the world. Furthermore, thanks to RuckPay’s payment solution you will improve your customers’ experience and your acceptance rate thanks to fast and clear online payments.
- * Version: 1.0.1
+ * Version: 1.0.2
  * Author: RuckPay
  * Author URI: https://github.com/RuckPay/SDK-WooCommerce
  * Requires at least: 6.4.2
@@ -252,7 +252,10 @@ class WC_RuckPay_Payments {
 	public static function ruckpay_field_mode_callback() {
 		$options = get_option( 'ruckpay_options' );
 
-		$isTest = $options[ self::MODE ] === self::MODE_TEST;
+		$isTest = true;
+		if ( isset( $options[ self::MODE ] ) ) {
+			$isTest = $options[ self::MODE ] === self::MODE_TEST;
+		}
 
 		echo '<select name="ruckpay_options[' . self::MODE . ']" id="ruckpay_mode">'
 		     . '<option value="' . self::MODE_TEST . '" ' . ( $isTest ? 'selected="selected"' : '' ) . '>' . __( 'Test',
@@ -265,25 +268,45 @@ class WC_RuckPay_Payments {
 	public static function ruckpay_field_test_key_callback() {
 		$options = get_option( 'ruckpay_options' );
 
-		echo '<input type="text" name="ruckpay_options[' . self::TEST_KEY . ']" id="ruckpay_test_key" value="' . $options[ self::TEST_KEY ] . '" class="regular-text" />';
+		$key = '';
+		if ( isset( $options[ self::TEST_KEY ] ) ) {
+			$key = $options[ self::TEST_KEY ];
+		}
+
+		echo '<input type="text" name="ruckpay_options[' . self::TEST_KEY . ']" id="ruckpay_test_key" value="' . $key . '" class="regular-text" />';
 	}
 
 	public static function ruckpay_field_test_secret_callback() {
 		$options = get_option( 'ruckpay_options' );
 
-		echo '<input type="text" name="ruckpay_options[' . self::TEST_SECRET . ']" id="ruckpay_test_secret" value="' . $options[ self::TEST_SECRET ] . '" class="regular-text" />';
+		$secret = '';
+		if ( isset( $options[ self::TEST_SECRET ] ) ) {
+			$secret = $options[ self::TEST_SECRET ];
+		}
+
+		echo '<input type="text" name="ruckpay_options[' . self::TEST_SECRET . ']" id="ruckpay_test_secret" value="' . $secret . '" class="regular-text" />';
 	}
 
 	public static function ruckpay_field_live_key_callback() {
 		$options = get_option( 'ruckpay_options' );
 
-		echo '<input type="text" name="ruckpay_options[' . self::LIVE_KEY . ']" id="ruckpay_live_key" value="' . $options[ self::LIVE_KEY ] . '" class="regular-text" />';
+		$key = '';
+		if ( isset( $options[ self::LIVE_KEY ] ) ) {
+			$key = $options[ self::LIVE_KEY ];
+		}
+
+		echo '<input type="text" name="ruckpay_options[' . self::LIVE_KEY . ']" id="ruckpay_live_key" value="' . $key . '" class="regular-text" />';
 	}
 
 	public static function ruckpay_field_live_secret_callback() {
 		$options = get_option( 'ruckpay_options' );
 
-		echo '<input type="text" name="ruckpay_options[' . self::LIVE_SECRET . ']" id="ruckpay_live_secret" value="' . $options[ self::LIVE_SECRET ] . '" class="regular-text" />';
+		$secret = '';
+		if ( isset( $options[ self::LIVE_SECRET ] ) ) {
+			$secret = $options[ self::LIVE_SECRET ];
+		}
+
+		echo '<input type="text" name="ruckpay_options[' . self::LIVE_SECRET . ']" id="ruckpay_live_secret" value="' . $secret . '" class="regular-text" />';
 	}
 
 	public static function ruckpay_options_page() {
