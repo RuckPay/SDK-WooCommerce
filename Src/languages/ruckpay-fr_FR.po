@@ -1,8 +1,8 @@
 # Copyright (C) 2024 RuckPay
-# This file is distributed under the same license as the RuckPay Payments for WooCommerce plugin.
+# This file is distributed under the same license as the RuckPay plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: RuckPay Payments for WooCommerce 1.0.0\n"
+"Project-Id-Version: RuckPay 1.0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/woocommerce-"
 "gateway-ruckpay\n"
 "POT-Creation-Date: 2024-01-15T16:38:41+00:00\n"
@@ -17,8 +17,8 @@ msgstr ""
 "X-Domain: ruckpay\n"
 
 #. Plugin Name of the plugin
-msgid "RuckPay Payments for WooCommerce"
-msgstr "Paiements RuckPay pour WooCommerce"
+msgid "RuckPay"
+msgstr "RuckPay"
 
 #. Plugin URI of the plugin
 #. Author URI of the plugin

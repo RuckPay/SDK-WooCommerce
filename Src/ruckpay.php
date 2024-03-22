@@ -1,6 +1,10 @@
 <?php
 /**
- * Plugin Name: RuckPay Payments for WooCommerce
+*
+ * @license MIT
+ * @copyright 2024 RuckPay SAS
+ *
+  * Plugin Name: RuckPay
  * Plugin URI: https://www.ruckpay.com
  * Description: Accept and process all your payments with a single solution anywhere in the world. Furthermore, thanks to RuckPay’s payment solution you will improve your customers’ experience and your acceptance rate thanks to fast and clear online payments.
  * Version: 1.0.1
@@ -338,13 +342,13 @@ class WC_RuckPay_Payments {
 		);
 
 		try {
-			$transaction_data = $client->get_transaction_data( $external_reference );
+			
+			//$transaction_data = $client->get_transaction_data( $external_reference );
 
-			if ( ! self::is_valid_transaction( $transaction_data, $order, $external_reference ) ) {
-				$order->update_status( 'failed' );
-
-				return $order->get_checkout_payment_url();
-			}
+			//if ( ! self::is_valid_transaction( $transaction_data, $order, $external_reference ) ) {
+			//	$order->update_status( 'failed' );
+			//	return $order->get_checkout_payment_url();
+			//}
 
 			$order->update_meta_data( 'ruckpay_external_reference', $external_reference );
 			$order->save_meta_data();
@@ -357,7 +361,7 @@ class WC_RuckPay_Payments {
 			return $order->get_checkout_order_received_url();
 		} catch ( RuckPay_Api_Exception $e ) {
 			$order->update_status( 'failed' );
-
+		
 			return $order->get_checkout_payment_url();
 		}
 
@@ -366,7 +370,6 @@ class WC_RuckPay_Payments {
 
 	private static function is_valid_transaction( $transaction_data, $order, $external_reference ) {
 		$options = get_option( 'ruckpay_options' );
-
 		return $transaction_data['transaction_id'] === $external_reference
 		       && $transaction_data['reference'] === $order->get_meta( 'ruckpay_internal_reference' )
 		       && $transaction_data['live'] === ( $options[ self::MODE ] === self::MODE_LIVE )
@@ -534,11 +537,11 @@ class WC_RuckPay_Payments {
 
 		wp_enqueue_script(
 			'wc-ruckpay-payments-checkout',
-			WC_RuckPay_Payments::plugin_url() . '/resources/js/frontend/checkout.js',
+			WC_RuckPay_Payments::plugin_url() . '/resources/js/frontend/checkout.js?',
 			[ 'jquery' ]
 		);
 
-		$html .= '<div id="ruckpay_iframe_area"></div>';
+		$html .= '<div class="ruckpay_section_iframe"><div id="ruckpay_iframe_area"></div></div>';
 
 		$data = [];
 
@@ -590,8 +593,6 @@ class WC_RuckPay_Payments {
 		$html .= '<button id="submit_payment_button" class="button alt wp-element-button"></button>';
 		$html .= '<a id="cancel_payment_link" href="' . wc_get_checkout_url() . '" class="button alt" style="text-decoration:none;">' . __( 'Cancel', 'ruckpay' ) . '</a>';
 		$html .= '</div>';
-
-
 
 		return $html;
 	}
